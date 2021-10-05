@@ -1,0 +1,25 @@
+{
+  "name": "parcel-sass-boilerplate",
+  "version": "1.0.0",
+  "description": "Parcel sass boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikokrainer/Parcel-sass-boilerplate.git"
+  },
+  "author": "NikoBillion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikokrainer/Parcel-sass-boilerplate/issues"
+  },
+  "homepage": "https://github.com/nikokrainer/Parcel-sass-boilerplate#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.41.1"
+  }
+}

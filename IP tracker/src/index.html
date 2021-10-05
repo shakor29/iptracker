@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+<!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+<!-- end leaflet -->
+<!-- IPify -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- end IPify -->
+    <title>IP Adress Tracker</title>
+    <script src="./scripts/index.js" defer></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero__heading">
+        <h1>IP Address Tracker</h1>
+      </div>
+
+      <div class="hero__form flex flex-ai-c flex-jc-c container container--px">
+        <div class="input">
+          <input
+            id="ip_address"
+            maxlength="15"
+            type="text"
+            placeholder="Enter your IP Address"
+          />
+        </div>
+        <div class="input-btn">
+          <a href="#" id="input-btn-a"><div  class="flex flex-ai-c flex-jc-c"><img src="images/icon-arrow.svg" alt="" /></div></a>
+        </div>
+      </div>
+
+      <div class="infoPanelContainer container container--px">
+        <div class="hero__infoPanel">
+
+          <div class="ipAddress">
+            <h3>IP ADDRESS</h3>
+            <h2 id="ipOutput">192.212.174.101</h2>
+          </div>
+
+          <div class="divider hide-for-mobile"></div>
+
+          <div class="location">
+            <h3>LOCATION</h3>
+            <h2 id="locationOutput">Brooklyn</h2>
+          </div>
+
+          <div class="divider hide-for-mobile"></div>
+
+          <div class="timezone">
+            <h3>TIMEZONE</h3>
+            <h2 id="timezoneOutput">UCT</h2>
+          </div>
+
+          <div class="divider hide-for-mobile"></div>
+
+          <div class="isp">
+            <h3>ISP</h3>
+            <h2 id="ispOutput">SpaceX Starlink</h2>
+          </div>
+
+        </div>
+      </div>
+
+    
+    </section>
+    <div class="mapContainer">
+    <div id="map"></div>
+    </div>
+
+    <section class="leafletmap">
+    </section>
+    
+  </body>
+</html>

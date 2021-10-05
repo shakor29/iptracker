@@ -1,0 +1,91 @@
+@use "../util" as *;
+@use "../globals/fonts.scss" as *;
+
+html {
+  font-size: 62.25%; /* inace bi moglo 100% */ /* spustit ce pixele sa 16px na 10, tako da ako koristimo rem onda ce 1rem=10px */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em; /* stavlja da su po defaultu fontovi 16px, tj 1.6rem */
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  max-width: 111.3rem;
+  margin: 0 auto;
+@include breakpoint-down(medium){
+  max-width: 75rem;
+}
+  &--py {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    @include breakpoint(large) {
+      padding-top: 9.6rem;
+      padding-bottom: 9.6rem;
+    }
+  }
+  &--px {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  &--pt {
+    padding-top: 7rem;
+
+    @include breakpoint(large) {
+      padding-top: 9.6rem;
+    }
+  }
+  &--pr {
+    padding-right: 2.4rem;
+  }
+  &--pb {
+    padding-bottom: 7rem;
+
+    @include breakpoint(large) {
+      padding-bottom: 9.6rem;
+    }
+  }
+  &--pl {
+    padding-left: 2.4rem;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.hide-for-mobile {
+  // hide for tablet and mobile
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint(large) {
+    display: none;
+  }
+}

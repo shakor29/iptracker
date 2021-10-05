@@ -1,0 +1,13 @@
+@use "../util" as *;
+
+.mapContainer {
+  position: relative;
+  z-index: 1;
+  #map {
+    height: 63vh;
+    width: 100%;
+    @include breakpoint (large){
+    height: 75vh;
+    }
+  }
+}
